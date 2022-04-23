@@ -1,0 +1,159 @@
+/* Dicas: 
+ * Vise utilizar fontes do GOOGLE (Google Fonts), pois é mais seguro que a fonte irá carregar normalmente para os usuários.
+ * 
+ * 
+ */
+
+body{
+    margin: 0; /* Tira o padrão da margem do navegador */
+    font-family: 'Open Sans', sans-serif; /* Define para toda a página a mesma fonte. */
+}
+
+/* Início da primeira sessão */
+
+#comeco {
+    background: url('imagens/back.jpg');
+    padding-bottom: 40px;
+    background-size: cover; /* Deixa o fundo da tela responsivo, ajuste automatico do largura e largura */
+}
+
+.logo {
+    margin: -24px auto;
+}
+
+.logo img{
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto; /* Tira as margens de cima e baixo e coloca auto para centralizar esquerda e direita */
+    display: block; /* Por padrão imagens não são bloco, para alinhar ao centro precisa ser */
+}
+
+.conteudo {
+    max-width: 700px;
+    overflow: hidden; /* Serve para fazer as outras divs de baixo(dentro dessa div conteudo) "flutuarem", ficarem do lado e não em baixo */
+    margin: 0 auto; /* Centraliza o bloco conteúdo */
+}
+
+.conteudo div{
+    float: left; /* Faz as Divs dentro do bloco conteúdo ficarem uma do lado da outra */
+    width: 50%; /* Define o tamanho máximo para encaixar uma do lado da outra. */
+    padding: 0 15px; /* Espaçamento entre as duas colunas */
+    box-sizing: border-box; /* Precisa para que continue um do lado do outro */
+}
+
+.conteudo h3, .info h3{
+    font-size: 29px;
+    margin: none;
+    color: #f5d400;
+    text-align: center;
+    font-weight: bold;
+}
+
+.conteudo p {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 20px;
+}
+
+.formulario {
+    background-color: #ffe647;
+    color: rgb(24, 24, 24);
+    border-radius: 10px;
+    padding: 17px;
+}
+
+.formulario input[type="text"], .formulario input[type="email"], .formulario select{  
+    width: 100%; /* Todo elemento input ocupa a linha toda */
+    box-sizing: border-box; /* Evita de vazar a caixa de texto na margem direita */
+    margin: 5px 0; /* Espaça os inputs, coloca 10px de margem na altura de cada input */
+    border-radius: 200px; /* Arredonda a borda de cada input */
+    border: 0; /* Tira a borda dos inputs */
+    padding: 8px 10px; /* Espaça dentro dos inputs para melhor visualização e design */
+    box-shadow: inset 0px 1px 4px rgba(0 0 0 / 75%); /* Sombra dentro com campos de input */
+}
+
+.formulario .label-form{
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 68%;
+    display: block; /* Se não transformar em bloco não alinha com o margin 0 auto; */
+    margin: 10px auto 5px auto;
+    border-radius: 200px;
+    background-color: #000000;
+    color: bisque;
+    padding: 12px;
+    border: none;
+}
+
+.label-form{ /* Design das labels do formulário */
+    color: rgb(24, 24, 24);
+    font-size: 20px;
+}
+
+.label-form2{ /* Design das labels do formulário */
+    color: rgb(24, 24, 24);
+    font-size: 90%;
+}
+
+.notificacoes {
+    font-size: 13px;
+}
+
+/* Início da sessão do meio */
+
+#meio{
+    background-color: rgb(255, 255, 255);
+}
+
+.conteudo-meio{
+    max-width: 650px;
+    overflow: hidden; /* Serve para fazer as outras divs de baixo(dentro dessa div conteudo) "flutuarem", ficarem do lado e não em baixo */
+    margin: 0 auto; /* Centraliza o bloco conteúdo */
+    padding: 20px;
+}
+
+.info {
+    border-top: solid 3px rgb(119, 16, 119);
+    margin: 20px auto;
+    text-align: center;
+}
+
+.vantagens{
+    overflow: hidden;
+    margin: 35px 0;
+}
+
+.vantagens div{
+    float: left;
+    width: 33%;
+    box-sizing: border-box; 
+}
+
+.vantagens img{
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    max-width: 33%;
+}
+
+.vantagens p{
+    text-align: center;
+    font-weight: bold;
+}
+
+@media (max-width: 645px){ /* Quando o comprimento da tela for até no máximo 645px, irá fazer alterar os valores abaixo */
+    .conteudo div{
+        width: 100%; /* Altera o comprimento das divs do conteúdo para que fiquem uma em baixo da outra e não do lado */
+    }
+}
+
+@media (max-width: 500px){
+    .vantagens div{
+        width: 100%;
+    }
+}
+
